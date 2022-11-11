@@ -11,8 +11,9 @@
 <!--      <class name="testcases.CreateOpportunity"/> -->
 <!--      <class name="testcases.EditOpportunity"/> -->
 <!--      <class name="testcases.DeleteOpportunity"/> -->
-     <class name="testcases.CreateAccount"/>
+<!--      <class name="testcases.CreateAccount"/> -->
 <!--      <class name="testcases.EditAccount"/> -->
+      <class name="testcases.DeleteAccount"/>
 <!--       <class name="testcases.Login"/> -->
 
     </classes>

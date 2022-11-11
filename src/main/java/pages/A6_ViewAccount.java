@@ -41,8 +41,26 @@ public class A6_ViewAccount extends ProjectSpecificMethods {
 			  System.out.println("Account is not edited");
 		  }
 		return this;
+	}
+		
+		public A6_ViewAccount verifyDeletedAccount() {
+			boolean Account = driver.findElement(By.xpath("//span[@class='slds-grid slds-grid--align-spread forceInlineEditCell']")).isEnabled();
+			System.out.println(Account);
+			
+			if(Account=true)
+			  {
+				System.out.println("Account is deleted");  
+			  }
+			  else {
+				  System.out.println("Account is not deleted");
+		}
+			return this;
+			
+		
+		}
+}
 		
 
-	}
+	
 
-}
+

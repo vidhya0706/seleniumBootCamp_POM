@@ -40,9 +40,10 @@ public class A5_AccountsPage extends ProjectSpecificMethods{
 
 	}
     
-    public A5_AccountsPage searchByAccountName(String name) {
+    public A5_AccountsPage searchByAccountName(String name) throws InterruptedException {
 		
     	driver.findElement(By.xpath("//input[@class='slds-input']")).sendKeys(name +Keys.ENTER);
+    	Thread.sleep(2000);
 		return this;
 
 	}
@@ -124,4 +125,14 @@ public class A5_AccountsPage extends ProjectSpecificMethods{
     	driver.findElement(By.xpath("//button[@name='SaveEdit']")).click();
     	return new A6_ViewAccount(driver);
 	}
+    public A5_AccountsPage clickDelete() {
+    	driver.findElement(By.xpath("//a[@title='Delete']")).click();
+		return this;
+	
+	}
+	public A6_ViewAccount deletedAccount() {
+		driver.findElement(By.xpath("//button[@title='Delete']")).click();
+		return new A6_ViewAccount(driver);
+	}
+	
 }
